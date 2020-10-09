@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>胡鼎-index</title>
+		<link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery-1.10.0.js" ></script>
+		<style type="text/css">
+			.options:link{
+				background: white;
+			}
+			.options:hover{
+				background: whitesmoke;
+			}
+			#logo-small-box{
+				overflow: hidden;
+				height: 50px;
+				position: relative;
+				top: -10px;
+			}
+			#logo-small{
+				height: 100px;
+				position: relative;
+				top: -50px;
+			}
+			#navi{
+				height: 70px;
+				background: none;
+				display: flex;
+				align-items: center;
+			}
+			#logo-img{
+				position: relative;
+			}
+			#logo-big-box{
+				height: 35px;
+				overflow: hidden;
+			}
+			#navi-box{
+				z-index: 100;
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+				transition: 0.3s;
+			}
+			.head-opt{
+				background: none;
+				height: 67px;
+				width: 100px;
+				color: white;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transition: 0.2s;
+			}
+			.head_opt_down{
+				background: none;
+				height: 65px;
+				width: 100px;
+				color: black;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transition: 0.2s;
+			}
+			.head_opt_down:hover{
+				box-shadow: 0px 3px orangered;
+				color: orangered;
+			}
+			.head-opt:hover{
+				background-color: hsla(0,0%,100%,0.25);
+				box-shadow: 0px 3px #fff;
+			}
+			#head-opt-box{
+				height: 70px;
+				background: none;
+				display: flex;
+				align-items: center;
+				padding: 0px;
+			}
+			#join-us{
+				height: 35px;
+				width: 90px;
+				font-size: 16px;
+				border-radius: 4px;
+				color: white;
+				border-style: solid;
+				border-color: white;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-width: 1px;
+				margin-left: 30px;
+				transition: 0.4s;
+			}
+			#join-us:hover{
+				background: deepskyblue;
+			}
+			#join_us_down{
+				height: 35px;
+				width: 90px;
+				font-size: 16px;
+				border-radius: 4px;
+				color: orangered;
+				border-style: solid;
+				border-color: deeppink;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-width: 1px;
+				margin-left: 30px;
+				transition: 0.4s;
+			}
+			#join_us_down:hover{
+				background: orangered;
+				color: white;
+			}
+			#float{
+				height: 100%;
+				width: 100%;
+				padding: 0px;
+				overflow: hidden;
+			}
+			.spa1{
+				font-size: 45px;
+				color: whitesmoke;
+				position: absolute;
+				left: 150px;
+				top: 180px;
+			}
+			.spa2{
+				font-size: 35px;
+				color: whitesmoke;
+				position: absolute;
+				left: 150px;
+				top: 260px;
+			} 
+			.item-img{
+				width: 100%;
+				height: 520px;
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+			}
+			.labels-box{
+				font-size: 24px;
+				padding-top: 5px;
+				color: hsla(200,100%,45%,1);
+			}
+			.labels{
+				font-size: 13px; 
+				display: inline-block; 
+				margin-top: 15px;
+				padding: 5px 30px 0px 30px;
+				color: gray
+			}
+			#labels-spe{
+				padding-left: 5px;
+				padding-right: 5px;
+			}
+			#intro{
+				line-height: 28px;
+				font-size: 15px;
+				padding-left: 80px;
+				padding-right: 70px;
+			}
+			#section1{
+				height: 100px;
+				font-size: 40px;
+				font-family: "小篆";
+				font-weight: 400;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-top: 30px;
+				margin-bottom: 20px;
+			}
+			#section1_box{
+				height: 230px;
+				background: greenyellow;
+				width: 7200px;
+				font-size: 0px;
+				position: relative;
+				left: 0px;
+			}
+			#section2_box{
+				height: 230px;
+				background: greenyellow;
+				width: 7200px;
+				font-size: 0px;
+				position: relative;
+				left: 0px;
+			}
+			.sections{
+				height: 240px;
+				width: 180px;
+				overflow: hidden;
+				background-repeat: no-repeat;
+				display: inline-block;
+			}
+			.sections p{
+				position: relative;
+				top: 50px;
+				transition: top 0.3s;
+			}
+			.sections:hover p{
+				top: 0px;
+			}
+			.sections:hover span{
+				visibility: visible;
+				opacity: 1;
+			}
+			.sections_text{
+				display: inline-block;
+				height: 100%;
+				width: 100%;
+				color: white;
+				font-size: 15px;
+				position: relative;
+				padding: 10px;
+				background-color: hsla(23,100%,60%,1);
+				opacity: 0;
+				visibility: hidden;
+				transition: visibility 0.4s, opacity 0.25s;
+				-webkit-transition: visibility 0.4s, opacity 0.25s; 
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			#bre_box{
+				width: 375px; 
+				border-bottom-style: solid;
+				border-bottom-width: 1px;
+				border-bottom-color: gray;
+				position: relative;
+			}
+			.bre{
+				display: inline-block;
+				padding-bottom: 10px;
+				color: black;
+				font-size: 15px;
+				font-weight: 100;
+			}
+			.bre:hover{
+				color: orangered;
+			}
+			.bre1{
+				margin-left: 30px;
+			}
+			#line_bottom{
+				width: 55px;
+				height: 2px;
+				border-style: solid;
+				background: orangered;
+				border-color: orangered;
+				position: absolute;
+				left: 0px;
+				top: 28px;
+				transition: left 0.2s,width 0.25s; 
+			}
+			.bre_text_box{
+				height: 400px;
+				width: 1000px;
+				position: absolute;
+				z-index: 1;
+				transition: opacity 0.4s;
+				opacity: 0;
+			}
+			.bre_img{
+				background-size: contain;
+				background-position: center;
+				background-repeat: no-repeat;
+				width: 500px; 
+				height: 400px;
+				float: left;
+			}
+			.bre_text{
+				float: left;
+				width: 500px; 
+				height: 400px; 
+				padding: 120px 30px 0px 30px;
+			}
+			.bre_text span{
+				font-size: 18px;
+				font-weight: 100;
+			}
+			.bre_text button{
+				width: 140px; 
+				height: 40px; 
+				font-size: 16px;
+				margin-top: 30px;
+			}
+			#brand-bgr-box{
+				height: 550px;
+				background-position: center;
+				background-image: url(img/yw-brand-bg.jpg);
+			}
+			#brand-name{
+				color: white;
+				height: 100px; 
+				font-size: 35px;
+				font-family: '小篆';
+				font-weight: 200;
+				text-align: center;
+				padding-top: 50px;
+			}
+			#brand_board{
+				position: absolute;
+			}
+			#brand_board_item1{
+				float: left;
+				height: 80px;
+				width: 270px;
+				overflow: hidden;
+				margin-left: 30px;
+				margin-top: 50px;
+			}
+			#brand_img{
+				position: relative;
+				top: 0px;
+				z-index: 1;
+				transition: top 0.6s;
+			}
+			#brand_board_item2{
+				float: left;
+				width: 650px;
+				height: 200px;
+				margin-left: 50px;
+				overflow: hidden;
+				
+			}
+			.brand-p{
+				width: 650px;
+				height: 200px;
+				display: flex;
+				align-items: center;
+				padding-left: 0px;
+				font-size: 15px;
+				line-height: 25px;
+				color: white;
+				text-align: left;
+				margin: 0px;
+			}
+			#flow_text{
+				position: relative;
+				width: 600px;
+				top: 0px;
+				z-index: 1;
+				transition: top 0.6s;
+			}
+			.flow_brand{
+				height: 50px;
+				width: 100px;
+				background-image: url(img/icons-brand2.png); 
+				background-size: 125px;
+				background-repeat: no-repeat;
+			}
+			.flow_brand_box{
+				padding: 5px 20px 5px 20px;
+				border-style: solid;
+				border-width: 1px;
+				border-color: white;
+				width: 140px;
+				display: inline-block;
+				margin-top: 10px;
+				margin-left: 23px;
+				transition: opacity 0.3s; 
+				opacity: 0.35;
+			}
+			#news_title{
+				height: 120px; 
+				display: flex; 
+				justify-content: center; 
+				align-items: center;
+			}
+			.news_text{
+				width: 1000px;
+				height: 300px;
+				padding: 0px;
+			}
+			.news_text_items{
+				width: 450px;
+				height: 300px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.tab_tab{
+				display: inline-block;
+				width: 35px;
+				height: 22px;
+				text-align: center;
+				border-radius: 3px;
+				border-style: solid;
+				border-width: 1px;
+				border-color: gray;
+				color: gray;
+				font-size: 14px;
+			}
+			.tab_time{
+				color: gray;
+				font-size: 16px;
+				display: inline-block;
+				margin-left: 5px;
+			}
+			.news_text_body{
+				font-size: 16px;
+				font-weight: 100;
+				margin-top: 10px;
+			}
+			.more{
+				font-size: 13px;
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-default visible-xs-block" role="navigation">
+		    <div class="container-fluid" style="padding: 10px 20px 10px 20px; background: white;"> 
+		    <div class="navbar-header">
+		        <button type="button" class="navbar-toggle" data-toggle="collapse"
+		                data-target="#collapse_">
+		            <span class="sr-only">切换导航</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		        </button>
+		        <a class="navbar-brand" href="#">
+					<div id="logo-small-box">
+						<img src="img/yw-logo.png" id="logo-small" />
+					</div>
+				</a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="collapse_" style="font-size: 20px;">
+		        <ul class="nav navbar-nav">
+		            <li class="options"><a href="#" style="color: black;">全版权运营</a></li>
+		            <li class="options"><a href="#" style="color: black;">移动产品</a></li>
+					<li class="options"><a href="#" style="color: black;">旗下品牌</a></li>
+					<li class="options"><a href="#" style="color: black;">新闻中心</a></li>
+					<li class="options"><a href="#" style="color: black;">联系我们</a></li>
+		        </ul>
+		    </div>
+		    </div>
+		</nav>
+		<div class="container-fluid visible-md-block visible-lg-block" id="navi-box">
+			<div class="row" id="navi">
+				<div class="col-md-2 col-md-push-2" id="logo-big-box">
+					<a href="#"><img src="img/yw-logo.png" height="100px" id="logo-img" /></a>
+				</div>
+				<div class="col-md-7 col-md-push-3" id="head-opt-box">
+					<a href="#123" style="text-decoration: none;">
+						<div class="head-opt" onclick="lick_leader(1)">
+							全版权运营
+						</div>
+					</a>
+					<a href="#123" style="text-decoration: none;">
+						<div class="head-opt" onclick="lick_leader(2)">
+							移动产品
+						</div>
+					</a>
+					<a href="#123" style="text-decoration: none;">
+						<div class="head-opt" onclick="lick_leader(3)">
+							旗下品牌
+						</div>
+					</a>
+					<a href="#123" style="text-decoration: none;">
+						<div class="head-opt" onclick="lick_leader(4)">
+							新闻中心
+						</div>
+					</a>
+					<a href="#123" style="text-decoration: none;">
+						<div class="head-opt">
+							联系我们
+						</div>
+					</a>
+					<a href="#" style="text-decoration: none;">
+						<div id="join-us">
+							加入我们
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid visible-md-block visible-lg-block">
+			<div class="row" style="background: black; height: 520px;">
+					<div class="carousel slide" id="float" data-ride="carousel" data-interval="3000">
+						<ol class="carousel-indicators">
+							<li data-slide-to="0" data-target="#float" class="active"></li>
+							<li data-slide-to="1" data-target="#float"></li>
+							<li data-slide-to="2" data-target="#float"></li>
+							<li data-slide-to="3" data-target="#float"></li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="item active">
+								<a href="#">
+								<div class="item-img" style="background-image: url(img/yw-hd-bg1_m.jpg);">
+									<span class="spa1">数字阅读与优质IP双核驱动</span>
+									<span class="spa2">中国引领行业的正版数字阅读平台<br />和文学 IP 培育平台</span>
+								</div>
+								</a>
+							</div>
+							<div class="item">
+								<a href="#">
+								<div class="item-img" style="background-image: url(img/yw-hd-bg2_m.jpg);">
+									<span class="spa1">海量原著，想读就读</span>
+									<span class="spa2">阅读自由主义</span>
+								</div>
+								</a>
+							</div>
+							<div class="item">
+								<a href="#">
+								<div class="item-img" style="background-image: url(img/yw-hd-bg-3_m.jpg); ">
+									<span class="spa1">WE’RE HIRING</span>
+									<span class="spa2">加入阅文，实现你的文学梦想！</span>
+								</div>
+								</a>
+							</div>
+							<div class="item">
+								<a href="#">
+								<div class="item-img" style="background-image: url(img/yw-hd-ebook_m.jpg);">
+									<span class="spa1">畅快阅读，瞬间感受</span>
+									<span class="spa2">QQ阅读首款电子书</span>
+								</div>
+								</a>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row" style="height: 60px;"></div>
+			<div class="row" style="height: 60px; overflow: hidden;">
+				<div class="col-md-3 col-md-push-2 text-center">
+					<img src="img/icons-pbm2.png" width="60px" style="position: relative; top: 0px;" />
+				</div>
+				<div class="col-md-2 col-md-push-2 text-center">
+					<img src="img/icons-pbm2.png" width="60px" style="position: relative; top: -60px;" />
+				</div>
+				<div class="col-md-3 col-md-push-2 text-center">
+					<img src="img/icons-pbm2.png" width="60px" style="position: relative; top: -120px;" />
+				</div>
+			</div>
+			<div class="row" style="height: 130px;">
+				<div class="col-md-3 col-md-push-2 text-center labels-box">
+					500余万作家 <br />
+					<span class="labels">完善的作家孵化和培养体系，打造作家、读者、平台互生共荣的文化生态体系。</span>
+				</div>
+				<div class="col-md-2 col-md-push-2 text-center labels-box">
+					近千万部作品 <br />
+					<span class="labels" id="labels-spe">原创小说已覆盖行业半壁江山，覆盖200多种内容品类。</span>
+				</div>
+				<div class="col-md-3 col-md-push-2 text-center labels-box">
+					数亿活跃用户  <br />
+					<span class="labels">以 QQ 阅读为中心，包罗网络原创、传统出版、音频听书等品牌功能的完整产品矩阵。</span>
+				</div>
+			</div>
+			<div class="row" style="height: 100px;">
+				<div class="col-md-8 col-md-push-2" id="intro">
+					阅文集团由腾讯文学与原盛大文学整合而成，作为引领行业的正版数字阅读平台和文学 IP 培育平台，
+					阅文旗下囊括 QQ 阅读、起点中文网等业界知名品牌，拥有近千万部作品储备、500 余万名创作者，
+					覆盖 200 多种内容品类，占据国内IP改编市场优势份额，成功输出《步步惊心》《鬼吹灯》《盗墓笔记》《琅琊榜》
+				   《择天记》等大量优秀改编作品。 
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center" id="section1">
+				全版权运营
+				</div>
+			</div>
+			<div class="row"  style="overflow: hidden;">
+				<div id="section1_box">
+					<div class="sections" style="background-image: url(img/row1_1.jpg);">
+						<span class="sections_text"><p>《国民老公带回家》是90后美女作家叶非夜的文风成熟后的代表作品，同名小说改编的漫画广受热议，同时改编的动画两季播放量达到1.3亿，正在不断创造新高。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_2.jpg);">
+						<span class="sections_text"><p>《凌天战尊》是上古世纪征文大赛的优秀作品，也让新人作家风轻扬走到大家的视野中。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_3.jpg);">
+						<span class="sections_text"><p>《一念永恒》是「网文之王」五大至尊之一作家耳根的最新力作，新书提笔不过寥寥数字，就吸引一响天开影业掷千万重金夺下影视版权。在影游联动的互助驱动下，其游戏改编权的市场价值有望再刷新高。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_4.jpg); width: 360px;">
+						<span class="sections_text"><p>《致青春》是辛夷坞的青春爱情小说，讲述了一群青春少年从大学校园的追爱之旅到步入社会的迷雾和抉择的故事。同名小说改编的电影，2014年作为赵薇导演的处女座，颇受业内好评；改编的电视剧也已于2016年7月陆续登陆各大卫视。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_5.jpg);">
+						<span class="sections_text"><p>《龙王传说》是唐家三少《斗罗大陆》系列的第三部。同名小说改编的漫画和游戏都收到了颇多的关注。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_6.jpg);">
+						<span class="sections_text"><p>《武动乾坤》是起点白金作家天蚕土豆的第三部长篇小说。同名小说改编的电视剧已于2016年开拍，多次曝光了人物海报，演员阵容强大。同时，该作改编的漫画、各类游戏都表现抢眼</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_7.jpg);">
+						<span class="sections_text"><p>《全职高手》是作家蝴蝶蓝的封神之作。离作品完结已隔数年，出版成绩依然喜人，同名小说改编的漫画颇受追捧，改编的动画播放初始，播放量已达3.5亿，有望成为国产动画的又一经典。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_8.jpg); width: 360px;">
+						<span class="sections_text"><p>《琅琊榜》根据海晏同名网络小说改编，电视剧2015年播出后，口碑与收视俱佳，反响热烈，红遍全球。在影游联动的驱动下，游戏改编权也相继授出。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_9.jpg);">
+						<span class="sections_text"><p>《从前有座灵剑山》是国王陛下在创世中文网开始创作的仙侠类小说。2014年8月，在腾讯动漫网络漫画化，并根据漫画在2016年1月8日改编成日本电视动画，是国产动漫的创新之作。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_10.jpg);">
+						<span class="sections_text"><p>《弑天刃》是小刀锋利又一部东方玄幻类小说，期待着能成为IP全版权开发的一个优秀案例。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_11.jpg);">
+						<span class="sections_text"><p>《圣墟》是起点中文网白金作者、网文五大至尊之一的辰东的新作，一经推出，各大公司就争相了解版权情况，目前同名游戏火热上线中。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_12.jpg); width: 360px;">
+						<span class="sections_text"><p>起点白金大神打眼的新作《神藏》2015年末在网上开始连载。新书发布会上，阅文集团播映了为其量身定制的微电影，并对该作走上大荧幕展现了期待。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_13.jpg);">
+						<span class="sections_text"><p>《鱼人二代创作的超人气网络原创小说《校花的贴身高手》在影游各领域都表现不错。同名游戏热议不断；改编的网络剧播放量达到3.7亿；改编的院线大电影，预计2016年开机，2017年公映。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_14.jpg);">
+						<span class="sections_text"><p>《花千骨》电视剧改编自fresh果果同名小说，讲述少女花千骨与长留上仙白子画之间关于责任、成长、取舍的纯爱虐恋。播出后颇受大众喜爱，也获得了多个专业认可的奖项，IP价值大大提升后，全版权的开发得到了很好的推动。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_15.jpg);">
+						<span class="sections_text"><p>《慕南枝》是起点中文网女频知名作家吱吱的最新作品，各家公司都对其保持了高度的关注，目前出版版权及影视剧版权已相继授出。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_16.jpg); width: 360px;">
+						<span class="sections_text"><p>《凤求凰》是女频作家天衣有风的代表作，出版表现骄人，同名小说改编、出品的古装电视剧已与2016年1月开机。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_1.jpg);">
+						<span class="sections_text"><p>《国民老公带回家》是90后美女作家叶非夜的文风成熟后的代表作品，同名小说改编的漫画广受热议，同时改编的动画两季播放量达到1.3亿，正在不断创造新高。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_2.jpg);">
+						<span class="sections_text"><p>《凌天战尊》是上古世纪征文大赛的优秀作品，也让新人作家风轻扬走到大家的视野中。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_3.jpg);">
+						<span class="sections_text"><p>《一念永恒》是「网文之王」五大至尊之一作家耳根的最新力作，新书提笔不过寥寥数字，就吸引一响天开影业掷千万重金夺下影视版权。在影游联动的互助驱动下，其游戏改编权的市场价值有望再刷新高。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_4.jpg); width: 360px;">
+						<span class="sections_text"><p>《致青春》是辛夷坞的青春爱情小说，讲述了一群青春少年从大学校园的追爱之旅到步入社会的迷雾和抉择的故事。同名小说改编的电影，2014年作为赵薇导演的处女座，颇受业内好评；改编的电视剧也已于2016年7月陆续登陆各大卫视。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_5.jpg);">
+						<span class="sections_text"><p>《龙王传说》是唐家三少《斗罗大陆》系列的第三部。同名小说改编的漫画和游戏都收到了颇多的关注。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_6.jpg);">
+						<span class="sections_text"><p>《武动乾坤》是起点白金作家天蚕土豆的第三部长篇小说。同名小说改编的电视剧已于2016年开拍，多次曝光了人物海报，演员阵容强大。同时，该作改编的漫画、各类游戏都表现抢眼。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_7.jpg);">
+						<span class="sections_text"><p>《全职高手》是作家蝴蝶蓝的封神之作。离作品完结已隔数年，出版成绩依然喜人，同名小说改编的漫画颇受追捧，改编的动画播放初始，播放量已达3.5亿，有望成为国产动画的又一经典。</span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_8.jpg); width: 360px;">
+						<span class="sections_text"><p>《琅琊榜》根据海晏同名网络小说改编，电视剧2015年播出后，口碑与收视俱佳，反响热烈，红遍全球。在影游联动的驱动下，游戏改编权也相继授出。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_9.jpg);">
+						<span class="sections_text"><p>《从前有座灵剑山》是国王陛下在创世中文网开始创作的仙侠类小说。2014年8月，在腾讯动漫网络漫画化，并根据漫画在2016年1月8日改编成日本电视动画，是国产动漫的创新之作。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_10.jpg);">
+						<span class="sections_text"><p>《弑天刃》是小刀锋利又一部东方玄幻类小说，期待着能成为IP全版权开发的一个优秀案例。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_11.jpg);">
+						<span class="sections_text"><p>《圣墟》是起点中文网白金作者、网文五大至尊之一的辰东的新作，一经推出，各大公司就争相了解版权情况，目前同名游戏火热上线中。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_12.jpg); width: 360px;">
+						<span class="sections_text"><p>起点白金大神打眼的新作《神藏》2015年末在网上开始连载。新书发布会上，阅文集团播映了为其量身定制的微电影，并对该作走上大荧幕展现了期待。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_13.jpg);">
+						<span class="sections_text"><p>《鱼人二代创作的超人气网络原创小说《校花的贴身高手》在影游各领域都表现不错。同名游戏热议不断；改编的网络剧播放量达到3.7亿；改编的院线大电影，预计2016年开机，2017年公映。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_14.jpg);">
+						<span class="sections_text"><p>《花千骨》电视剧改编自fresh果果同名小说，讲述少女花千骨与长留上仙白子画之间关于责任、成长、取舍的纯爱虐恋。播出后颇受大众喜爱，也获得了多个专业认可的奖项，IP价值大大提升后，全版权的开发得到了很好的推动。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_15.jpg);">
+						<span class="sections_text"><p>《慕南枝》是起点中文网女频知名作家吱吱的最新作品，各家公司都对其保持了高度的关注，目前出版版权及影视剧版权已相继授出。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row1_16.jpg); width: 360px;">
+						<span class="sections_text"><p>《凤求凰》是女频作家天衣有风的代表作，出版表现骄人，同名小说改编、出品的古装电视剧已与2016年1月开机。</p></span>
+					</div>
+				</div>
+			</div>
+			<div class="row"  style="overflow: hidden;">
+				<div id="section2_box">
+					<div class="sections" style="background-image: url(img/row2_1.jpg);">
+						<span class="sections_text"><p>凌舞水袖的神话喜剧小说，现已改编同名动漫及同名网剧，是一部充满潜力的 IP。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_2.jpg);">
+						<span class="sections_text"><p>由著名作家跳舞创作的一部西方奇幻作品，首发于起点中文网，同名RPG手游由巨人移动精心制作，同名3D玄幻网络游戏由空中网开发。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_3.jpg);">
+						<span class="sections_text"><p>乱连载在起点中文网的玄幻小说，已改编成动画，于2016年9月2日起每周五在腾讯视频独家网络更新。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_4.jpg); width: 360px;">
+						<span class="sections_text"><p>《郭敬明的长篇小说，后改编成由范冰冰、杨幂、吴亦凡主演的真人CG奇幻片，同名网剧也在改编制作中。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_5.jpg);">
+						<span class="sections_text"><p>改编自南派三叔所著同名小说《老九门》，由赵丽颖、张艺兴主演，2016年7月4日在东方卫视周播剧场播出，爱奇艺同步上线，荣登2016中国泛娱乐指数盛典「中国网生内容榜-网络剧榜top10」。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_6.jpg);">
+						<span class="sections_text"><p>《末日乐园》是起点作家须尾俱全连载在起点女生网的末世无限流小说，这是一部设定新颖，脑洞大开，剧情惊悚莫测，逻辑合理严谨的小说。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_7.jpg);">
+						<span class="sections_text"><p>《择天记》是网文大神猫腻的作品，一经推出便蝉联人气榜冠军。作为阅文集团的重点 IP 之一，《择天记》影视现已问世，动画、游戏、出版、漫画都已在开发过程中。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_8.jpg); width: 360px;">
+						<span class="sections_text"><p>10年沉淀的超级IP，曾荣登「中国IP价值榜-网络文学榜Top10」，网剧的播出开启了「盗墓文学IP年」。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_9.jpg);">
+						<span class="sections_text"><p>耳根的古典仙侠小说，进行过游戏、舞台剧、微电影等形式的改编，网络剧改编也在启动中。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_10.jpg);">
+						<span class="sections_text"><p>天下霸唱创作的经典悬疑盗墓小说，先后进行过漫画、游戏、电影、网剧的改编，均取得不俗成绩，当之无愧的超级IP。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_11.jpg);">
+						<span class="sections_text"><p>改编自月关的畅销小说，钟澍佳、梁胜权、黄俊文执导，张翰、朴敏英主演，拥有天生丽质的重磅IP价值，堪称最被期待的剧集之一。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_12.jpg); width: 360px;">
+						<span class="sections_text"><p>蒋胜男原创小说《芈月传》，进行了电视剧、游戏等多种形式的改编，一度掀起芈月热潮。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_13.jpg);">
+						<span class="sections_text"><p>沐轶所著古装穿越推理破案题材的网络小说，根据其改编的网络剧上线后备受好评，是以小博大的IP改编代表性案例。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_14.jpg);">
+						<span class="sections_text"><p>改编自李歆的同名小说《独步天下》，由企鹅影视、悦凯影视、新丽传媒联合出品，林峰、唐艺昕领衔主演，正在拍摄中，预计2018年上线。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_15.jpg);">
+						<span class="sections_text"><p>苏小暖所著同名小说，出版名为《一世倾城》，曾获获得2015年度“中国原创文学风云榜”的“年终桂冠”，目前仍在连载中。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_16.jpg); width: 360px;">
+						<span class="sections_text"><p>起点白金作家天蚕土豆的代表作，荣登「中国IP价值榜-网络文学榜top10」，其改编的漫画、动漫、游戏均广受欢迎，同名电视剧（吴磊主演）即将上映，同名电影同步制作中。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_1.jpg);">
+						<span class="sections_text"><p>凌舞水袖的神话喜剧小说，现已改编同名动漫及同名网剧，是一部充满潜力的 IP。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_2.jpg);">
+						<span class="sections_text"><p>由著名作家跳舞创作的一部西方奇幻作品，首发于起点中文网，同名RPG手游由巨人移动精心制作，同名3D玄幻网络游戏由空中网开发。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_3.jpg);">
+						<span class="sections_text"><p>乱连载在起点中文网的玄幻小说，已改编成动画，于2016年9月2日起每周五在腾讯视频独家网络更新。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_4.jpg); width: 360px;">
+						<span class="sections_text"><p>《郭敬明的长篇小说，后改编成由范冰冰、杨幂、吴亦凡主演的真人CG奇幻片，同名网剧也在改编制作中。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_5.jpg);">
+						<span class="sections_text"><p>改编自南派三叔所著同名小说《老九门》，由赵丽颖、张艺兴主演，2016年7月4日在东方卫视周播剧场播出，爱奇艺同步上线，荣登2016中国泛娱乐指数盛典「中国网生内容榜-网络剧榜top10」。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_6.jpg);">
+						<span class="sections_text"><p>《末日乐园》是起点作家须尾俱全连载在起点女生网的末世无限流小说，这是一部设定新颖，脑洞大开，剧情惊悚莫测，逻辑合理严谨的小说。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_7.jpg);">
+						<span class="sections_text"><p>《择天记》是网文大神猫腻的作品，一经推出便蝉联人气榜冠军。作为阅文集团的重点 IP 之一，《择天记》影视现已问世，动画、游戏、出版、漫画都已在开发过程中。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_8.jpg); width: 360px;">
+						<span class="sections_text"><p>10年沉淀的超级IP，曾荣登「中国IP价值榜-网络文学榜Top10」，网剧的播出开启了「盗墓文学IP年」。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_9.jpg);">
+						<span class="sections_text"><p>耳根的古典仙侠小说，进行过游戏、舞台剧、微电影等形式的改编，网络剧改编也在启动中。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_10.jpg);">
+						<span class="sections_text"><p>天下霸唱创作的经典悬疑盗墓小说，先后进行过漫画、游戏、电影、网剧的改编，均取得不俗成绩，当之无愧的超级IP。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_11.jpg);">
+						<span class="sections_text"><p>改编自月关的畅销小说，钟澍佳、梁胜权、黄俊文执导，张翰、朴敏英主演，拥有天生丽质的重磅IP价值，堪称最被期待的剧集之一。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_12.jpg); width: 360px;">
+						<span class="sections_text"><p>蒋胜男原创小说《芈月传》，进行了电视剧、游戏等多种形式的改编，一度掀起芈月热潮。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_13.jpg);">
+						<span class="sections_text"><p>沐轶所著古装穿越推理破案题材的网络小说，根据其改编的网络剧上线后备受好评，是以小博大的IP改编代表性案例。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_14.jpg);">
+						<span class="sections_text"><p>改编自李歆的同名小说《独步天下》，由企鹅影视、悦凯影视、新丽传媒联合出品，林峰、唐艺昕领衔主演，正在拍摄中，预计2018年上线。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_15.jpg);">
+						<span class="sections_text"><p>苏小暖所著同名小说，出版名为《一世倾城》，曾获获得2015年度“中国原创文学风云榜”的“年终桂冠”，目前仍在连载中。</p></span>
+					</div>
+					<div class="sections" style="background-image: url(img/row2_16.jpg); width: 360px;">
+						<span class="sections_text"><p>起点白金作家天蚕土豆的代表作，荣登「中国IP价值榜-网络文学榜top10」，其改编的漫画、动漫、游戏均广受欢迎，同名电视剧（吴磊主演）即将上映，同名电影同步制作中。</p></span>
+					</div>
+				</div>
+			</div>
+			<div class="row" style="height: 120px;">
+				<div class="col-md-12" style="padding-top: 60px; display: flex;justify-content: center;">
+					<div id="bre_box">
+						<a href="#123"><span class="bre" onmouseover="line_bottom(this,0)">QQ阅读</span></a>
+						<a href="#123"><span class="bre bre1" onmouseover="line_bottom(this,1)">起点阅读</span></a>
+						<a href="#123"><span class="bre bre1" onmouseover="line_bottom(this,2)">作家助手</span></a>
+						<a href="#123"><span class="bre bre1" onmouseover="line_bottom(this,3)">QQ阅读电子书</span></a>
+						<div id="line_bottom"></div>
+					</div>
+				</div>
+			</div>
+			<div class="row" style="height: 400px;">
+				<div class="col-md-12" style="display: flex; justify-content: center;">
+					<div class="bre_text_box">
+						<div class="bre_img" style="background-image: url(img/yw-app-qq@2x.png);"></div>
+						<div class="bre_text">
+							<h2>QQ阅读 海量原著 想读就读</h2>
+							<span>个性推荐，拥有你的专属书城；精致排版，感受极致阅读体验。</span><br />
+							<button type="button" class="btn btn-warning">查看详情&gt;&gt;</button>
+						</div>
+					</div>
+					<div class="bre_text_box">
+						<div class="bre_img" style="background-image: url(img/yw-app-qd-new@2x.png);"></div>
+						<div class="bre_text">
+							<h2>起点读书 海量小说 原创乐土</h2>
+							<span>看原创正版小说，追大神作家；广大读者的选择，百万作家在此创作；热门影视、游戏 IP 发源地。</span><br />
+							<button type="button" class="btn btn-warning">查看详情&gt;&gt;</button>
+						</div>
+					</div>
+					<div class="bre_text_box">
+						<div class="bre_img" style="background-image: url(img/yw-app-zj-new@2x.png);"></div>
+						<div class="bre_text">
+							<h2>作家助手 随时随地 全民写作</h2>
+							<span>随身记录乍现灵感，发布专属自己的作品，与数亿读者分享你的故事。</span><br />
+							<button type="button" class="btn btn-warning">查看详情&gt;&gt;</button>
+						</div>
+					</div>
+					<div class="bre_text_box">
+						<div class="bre_img" style="background-image: url(img/yw-ebook@2x.jpg);"></div>
+						<div class="bre_text">
+							<h2>作家助手 随时随地 全民写作</h2>
+							<span>无缝对接QQ阅读、起点中文网等阅文旗下海量正版内容阅读平台。</span><br />
+							<button type="button" class="btn btn-warning">查看详情&gt;&gt;</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12" id="brand-bgr-box">
+					<div class="row" id="brand-name">
+						旗下品牌
+					</div>
+					<div class="row" style="height: 180px;">
+						<div class="col-md-12" style="text-align: center; padding: 0px; display: flex;justify-content: center;">
+							<div style="width: 1000px; height: 200px;">
+								<div id="brand_board">
+									<div id="brand_board_item1">
+										<img src="img/icons-brand2.png" id="brand_img" />
+									</div>
+									<div id="brand_board_item2">
+										<div id="flow_text">
+										<p class="brand-p">创世中文网成立于 2013 年，是由资深网络文学团队精心打造的集阅读、创作、互动社区、版权运营于一体的全开放网络文学平台。依托阅文集团，基于团队经验和影响力以及旗下大批知名网络作家，我们将全力推进网络文学泛娱乐运营、用户阅读和互动体验、原创扶持力度的全面升级，努力将网络文学推向一个全新时代，成为网络文学强势崛起的新锐力量和行业格局的主要变革者。</p>
+										<p class="brand-p">红袖添香创办于 1999 年，国内引领行业的女性文学数字版权运营商。 红袖添香为用户提供涵盖小说、散文、杂文、诗歌、歌词、剧本、日记等体裁的高品质创作和阅读服务，在言情、职场小说等女性文学写作及出版领域具有巨大影响力。</p>
+										<p class="brand-p">天津华文天下图书有限公司成立于 2001 年，是中国民营书业具有深远影响力的公司之一。公司策划了大量优秀畅销图书。其中多本图书单品销量超过百万册，在版权引进和国内原创作家的打造上，探索出一整套畅销书运营模式。</p>
+										<p class="brand-p">聚石文华的运营团队以专业出版策划人为主体，汇集行业精英凝聚而成；公司的整体运作主要包括图书的策划出版及发行 ，立志于为出版市场提供卓越的文学作品。自筹备阶段起，聚石文华已然洽谈并签约数名国内一流作家新作；并携手搜狐、腾讯、新浪、起点、晋江、红袖、四月天、17K等原创文学网站搭建出版文学的战略合作平台。</p>
+										<p class="brand-p">懒人听书是由深圳市懒人在线科技有限公司研发并运营的移动音频 APP ，公司成立于 2012 年，专注移动互联网有声数字领域，立足移动音频行业，为用户提供所需的书籍节目以及有声数字交流服务等高品质内容。 上线至今，懒人听书始终坚持产品第一、用户至上，不断优化产品，丰富平台资源，形成多项行业优势，业已成为移动音频行业优质品牌。</p>
+										<p class="brand-p">起点女生网成立于 2009 年 11 月，其前身是“起点女生频道”，致力于对女性网络原创文学及作者的培养和挖掘。起点女生网依托起点中文网的成熟运作机制，成功实现了女性网络原创文学的商业化发展模式。囊括了《步步惊心》、《搜索》、《毒胭脂》等多部热门影视剧的原著小说版权。</p>
+										<p class="brand-p">起点中文网创建于 2002 年 5 月，是国内引领行业的原创文学门户网站和写作平台，隶属于数字阅读综合平台——阅文集团。起点中文网前身为起点原创文学协会，长期致力于原创文学作者的挖掘与培养工作，并以推动中国文学原创事业为发展宗旨，并以此为契机开创了在线收费阅读即电子出版的新模式。</p>
+										<p class="brand-p"></p>
+										<p class="brand-p">最早始于 WAP 版 QQ 书城的 QQ 阅读，早在前智能手机年代就积累了大量用用户基础。有着优良用户体验和海量原创作品的 QQ 阅读早已覆盖 iOS 、Android 等主流移动设备，是目前市面上广受用户欢迎的移动读书软件。</p>
+										<p class="brand-p">榕树下是国内历史悠久、极具品牌感染力的文学类网站，创办于 1997 年。“榕树下”曾使无数爱好文学的普通人好梦成真，并凝聚了一批在华语文学界极具影响力的作家，如韩寒、慕容雪村、宁财神、李寻欢、安妮宝贝、邢育森、蔡骏、今何在、郭敬明。 2009 年底，“榕树下”宣布改版上线之后，在原来的原创文学网站基础上，转型为一个传播文学、文化评论及原创写作的综合人文媒体，并定位于华语文学领域的垂直门户。</p>
+										<p class="brand-p">天方听书网创建于 2004 年，经过多年的运营和发展，已经成为国内引领行业的听书网站。天方听书网专注于有声读物的研发和市场运作，为广大听友提供时尚前沿的听书资讯和听书内容。网站内容涉及经济管理、中外文学、古典文学、现代文学、儿童文学、探案悬疑、科幻文学、百科知识等近 20 个大类。</p>
+										<p class="brand-p">潇湘书院一直以做中国最好的女生原创网站为目标，立志为广大的原创作者提供一个公平、公正，健康的文学发展平台。优秀的工作团队和人性化的管理模式，使潇湘书院成为女性原创作者群体以及读者群体中具备强大吸引力和归属感的原创网站。</p>
+										<p class="brand-p">小说阅读网是国内优质文学版权运营商，网站拥有海量原创作品、签约作家、签约编剧及用户群，自 2009 年 4 月新版上线、开通 VIP 系统以来，打造出数部点击过亿的超人气签约作品，迅速创下单部作品点击逾两亿、单章订阅超三万、月稿酬收入过六万等各项辉煌记录，缔造出白金高薪网络作家十多人，月薪过万作家一百五十多人。</p>
+										<p class="brand-p">言情小说吧成立于 2005 年，从建立之初至今，一直秉承着为用户提供优质的言情小说阅读体验平台，打造全球华语言情小说阅读基地的理念，在网络文学界走出了一条专业化的独特发展道路。言情小说吧拥有人气超高的论坛、方便快捷的网游以及站内家园等，能给用户提供读书、休闲、娱乐的多方位体验。</p>
+										<p class="brand-p">云起书院是引领行业的女性文学创作基地，以打造“精品”为目标，成就无数平民作者的文学梦想。作为网络文学产业的重要细分市场，女性文学有着巨大的市场想象空间。云起书院将肩负起打造全新女性文学产业生态的重任，基于腾讯强大的资源平台和运营体系，促进中国女性文学市场的健康、持续发展，迎接“全民阅读”时代的到来。</p>
+										<p class="brand-p">中智博文图书有限公司成立于2003年，是一家专业从事图书策划、营销推广和发行代理的民营图书企业。公司以高品质、高效率、高市场敏锐度和实用性、艺术性相结合的原则，成功策划、出版发行了上千种图书品种，内容涵盖史地文化、少儿百科、经管励志、健康生活、学生读物、世界名著等诸多方面。</p>
+										<p class="brand-p">作家助手是阅文集团诚意打造的一款移动创作应用，覆盖 Android、iOS 等主流移动平台，凭借流畅的用户体验、强大的创作工具、可视化的统计分析等优势，迅速成为市场上深受作家喜爱的移动创作应用之一。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12" style="display: flex; justify-content: center;">
+							<div style="height: 250px; width: 1000px;">
+								<a href="#123"><div class="flow_brand_box" onmouseover="flow_brd(this,0)"><div class="flow_brand" style="background-position-x: -35px;"></div></div>
+								<a href="#123"><div class="flow_brand_box" onmouseover="flow_brd(this,1)"><div class="flow_brand" style="background-position-x: -40px; background-position-y: -46px;"></div></div></a>
+								<a href="#123"><div class="flow_brand_box" onmouseover="flow_brd(this,2)"><div class="flow_brand" style="background-position-x: -32px; background-position-y: -96px;"></div></div></a>
+								<a href="#123"><div class="flow_brand_box" onmouseover="flow_brd(this,3)"><div class="flow_brand" style="background-position-x: -30px; background-position-y: -148px;"></div></div></a>
+								<a href="#123"><div class="flow_brand_box" onmouseover="flow_brd(this,4)"><div class="flow_brand" style="background-position-x: -35px; background-position-y: -198px;"></div></div></a>
+								<a href="#123"><div class="flow_brand_box" onmouseover="flow_brd(this,5)"><div class="flow_brand" style="background-position-x: -38px; background-position-y: -248px;"></div></div></a>
+								<a href="#123"><div class="flow_brand_box" onmouseover="flow_brd(this,6)"><div class="flow_brand" style="background-position-x: -32px; background-position-y: -296px;"></div></div></a>
+								<a href="#123"><div class="flow_brand_box" onmouseover="flow_brd(this,7)"><div class="flow_brand" style="background-position-x: -35px; background-position-y: -346px;"></div></div></a>
+								<a href="#123"><div class="flow_brand_box" onmouseover="flow_brd(this,8)"><div class="flow_brand" style="background-position-x: -31px; background-position-y: -396px;"></div></div></a>
+								<a href="#123"><div class="flow_brand_box" onmouseover="flow_brd(this,9)"><div class="flow_brand" style="background-position-x: -0px; background-size: 100px; background-position-y: -352px;"></div></div></a>
+								<a href="#123"><div class="flow_brand_box" onmouseover="flow_brd(this,10)"><div class="flow_brand" style="background-position-x: -30px; background-position-y: -497px;"></div></div></a>
+								<a href="#123"><div class="flow_brand_box" onmouseover="flow_brd(this,11)"><div class="flow_brand" style="background-position-x: -35px; background-position-y: -547px;"></div></div></a>
+								<a href="#123"><div class="flow_brand_box" onmouseover="flow_brd(this,12)"><div class="flow_brand" style="background-position-x: -35px; background-position-y: -597px;"></div></div></a>
+								<a href="#123"><div class="flow_brand_box" onmouseover="flow_brd(this,13)"><div class="flow_brand" style="background-position-x: -35px; background-position-y: -647px;"></div></div></a>
+								<a href="#123"><div class="flow_brand_box" onmouseover="flow_brd(this,14)"><div class="flow_brand" style="background-position-x: -41px; background-position-y: -747px;"></div></div></a>
+								<a href="#123"><div class="flow_brand_box" onmouseover="flow_brd(this,15)"><div class="flow_brand" style="background-position-x: -30px; background-position-y: -797px;"></div></div></a>
+								<a href="#123"><div class="flow_brand_box" onmouseover="flow_brd(this,16)"><div class="flow_brand" style="background-position-x: -30px; background-position-y: -846px;"></div></div></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row" id="news_title">
+				<h1>新闻中心</h1>
+			</div>
+			<div class="row" style="display: flex; justify-content: center;">
+				<div class="news_text">
+				 	<div class="news_text_items">
+						<h3>阅文集团CEO吴文辉：聚焦“网络文学+” 振兴文创产业</h3>
+						<span class="tab_tab">新闻</span><span class="tab_time">2017-07-25</span>
+						<p class="news_text_body">在中国网络文学大会召开前夕，阅文集团CEO吴文辉表达了对网络文学的发展和中国网络文学大会的期待。文创产业是国家软实力的表现形式之一，超级IP的出现将引领中国去争夺世界文创市场的话语权。阅文集团希望能更多地把作品推荐到海外，携手各方创造有世界影响力的超级IP。</p>
+						<a href="#123" class="more" style="color: deepskyblue;">阅读更多&gt;</a>
+					</div>
+					<div class="news_text_items" style="margin-left: 96px;">
+						<h3>阅文集团白金作家叶非夜：找回创作的初心</h3>
+						<span class="tab_tab">人物</span><span class="tab_time">2017-07-25</span>
+						<p class="news_text_body">阅文集团白金作家，高人气IP《国民老公带回家》原著作者叶非夜对即将召开的中国网络文学大会表示很期待，并讲述了她在网络文学行业发展中的心路历程，愿以初心做好该做的事。</p>
+						<a href="#123" class="more" style="color: deepskyblue;">阅读更多&gt;</a>
+					</div>
+				</div>
+			</div>
+			<div class="row" style="display: flex; justify-content: center; height: 400px;">
+				<div class="news_text">
+				 	<div class="news_text_items">
+						<h3>阅文集团大神作家国王陛下：写出正能量的作品是网文作者的社会担当</h3>
+						<span class="tab_tab">人物</span><span class="tab_time">2017-07-25</span>
+						<p class="news_text_body">阅文集团大神作家，知名仙侠作品《从前有座灵剑山》作者国王陛下在中国网络文学大会召开前夕受访，表示能够写出一部让大家喜欢的正能量作品就是作为一个网文作者的社会担当。</p>
+						<a href="#123" class="more" style="color: deepskyblue;">阅读更多&gt;</a>
+					</div>
+					<div class="news_text_items" style="margin-left: 96px;">
+						<h3>阅文大数据洞察：女性向市场升级趋势</h3>
+						<span class="tab_tab">报告</span><span class="tab_time">2017-07-25</span>
+						<p class="news_text_body">中国正在步入“她时代”。随着女性收入及社会地位的提高，以女性为中心的消费主义成为新的潮流。娱乐方式的多元化、内容产业的扩大和细分，带动这股风潮从消费市场蔓延到文化娱乐市场，垂直女性内容正在成为下一个风口。作为新兴的内容细分领域，女性内容产业正在经历新的结构升级。“她”们拥有什么样的内容消费习惯，需要什么样的产品？通过对内容产业源头——数字阅读女性用户的盘点和分析，我们能能够深入了解，“她时代”内容应该如何迭代。</p>
+						<a href="#123" class="more" style="color: deepskyblue;">阅读更多&gt;</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			var navi_box=document.getElementById("navi-box");
+			var logo_img=document.getElementById("logo-img");
+			var head_opt=document.querySelectorAll(".head-opt");
+			var join_us=document.getElementById("join-us");
+			var bre_bx=document.querySelectorAll(".bre_text_box");
+			bre_bx[0].style.opacity=1;
+			function scrollmove(step){
+				$('html,body').animate({scrollTop:step},1500);
+			}
+			function lick_leader(index){
+				if(index==1){
+					scrollmove(800);
+				}
+				else if(index==2){
+					scrollmove(1350);
+				}
+				else if(index==3){
+					scrollmove(1900);
+				}
+				else if(index==4){
+					scrollmove(2500);
+				}
+			}
+			function top_down(){
+				logo_img.style.top="-50px";
+				for(var i=0;i<head_opt.length;i++){
+					head_opt[i].className="head_opt_down";
+				}
+				join_us.id="join_us_down";
+			}
+			function top_up(){
+				logo_img.style.top="0px";
+				for(var i=0;i<head_opt.length;i++){
+					head_opt[i].className="head-opt";
+				}
+				join_us.id="join-us";
+			}
+			function nav_exch(){
+				for(var i=0;i<head_opt.length;i++){
+					head_opt[i].style.backgroundColor="";
+					head_opt[i].style.boxShadow="";
+					head_opt[i].style.color="";
+				}
+			}
+			function nav_transf(i){
+				head_opt[i].style.backgroundColor="orangered";
+				head_opt[i].style.boxShadow="0px 3px orangered";
+				head_opt[i].style.color="black";
+			}
+			var swit=0;
+			$(window).scroll(function(){
+				var top=$(window).scrollTop();
+				if(top==0){
+					navi_box.style.background="transparent";
+					top_up();
+					if(swit==1){
+						nav_exch();
+						swit=0;
+					}
+				}
+				else{
+					swit=1;
+					navi_box.style.background="whitesmoke";
+					top_down();
+					if(top>0&&top<1000){
+						nav_exch();
+						nav_transf(0);
+					}
+					else if(top>=1000&&top<1500){
+						nav_exch();
+						nav_transf(1);
+					}
+					else if(top>=1500&&top<2000){
+						nav_exch();
+						nav_transf(2);
+					}
+					else if(top>=2000){
+						nav_exch();
+						nav_transf(3);
+					}
+				}
+			});
+			var section1_box=document.getElementById("section1_box");
+			var section2_box=document.getElementById("section2_box");
+			var width=document.documentElement.clientWidth;
+			var left1=0;
+			var left2=0;
+			var swi1=0;
+			var swi2=0;
+			var time1=setInterval(function(){
+				if(swi1==0){
+				if(left1<=-7200+width){
+					left1=left1+3600;
+					section1_box.style.left=left1+"px";
+				}
+				left1=left1-0.5;
+				section1_box.style.left=left1+"px";
+				}
+			},10);
+			section1_box.onmouseover=function(){
+				swi1=1;
+			}
+			section1_box.onmouseout=function(){
+				swi1=0;
+			}
+			var time2=setInterval(function(){
+				if(swi2==0){
+				if(left2<=-7200+width){
+					left2=left2+3600;
+					section2_box.style.left=left2+"px";
+				}
+				left2=left2-0.25;
+				section2_box.style.left=left2+"px";
+				}
+			},10);
+			section2_box.onmouseover=function(){
+				swi2=1;
+			}
+			section2_box.onmouseout=function(){
+				swi2=0;
+			}
+			var line_bot=document.getElementById("line_bottom");
+			function line_bottom(id,index){
+				var num=0;
+				num=index;
+				line_bot.style.left=num*(90)+"px";
+				for(var i=0;i<4;i++){
+					if(i==num){
+						bre_bx[i].style.opacity=1;
+					}else{
+						bre_bx[i].style.opacity=0;
+					}
+				}
+				if(index==1){
+					line_bot.style.width="55px"
+				}
+				else if(index==2){
+					line_bot.style.width="60px"
+				}
+				else if(index==3){
+					line_bot.style.width="110px"
+				}
+				else if(index==0){
+					line_bot.style.width="55px"
+				}
+			}
+			var flow=document.querySelectorAll(".flow_brand_box");
+			var flow_tex=document.getElementById("flow_text");
+			var brand_im=document.getElementById("brand_img");
+			var brand_board=document.getElementById("brand_board");
+			flow[0].style.opacity=1;
+			function flow_brd(id,index){
+				var num=0;
+				num=index;
+				brand_board.style.transition="opacity 0.01s";
+				if(brand_im.style.top!=num*(-80)+"px"){
+				brand_board.style.opacity=0;}
+				for(var i=0;i<flow.length;i++){
+					flow[i].style.opacity=0.35;
+				}
+				setTimeout(function(){
+					brand_board.style.transition="opacity 0.3s";
+					brand_board.style.opacity=1;
+				},500)
+				id.style.opacity=1;
+				brand_im.style.top=num*(-80)+"px";
+				flow_tex.style.top=num*(-200)+"px";
+			}
+		</script>
+	</body>
+</html>
